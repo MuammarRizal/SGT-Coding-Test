@@ -3,7 +3,6 @@
   <main>
     <Section1 />
   </main>
-  <!-- <Etc /> -->
 </template>
 
 <script setup>

@@ -8,7 +8,7 @@ import FacebookIcon from "../assets/images/627443d78de17d2c59c8352c_9055795_face
 import PatreonIcon from "../assets/images/6274440c6a0ab7631dce0cd1_9055888_patreon_bxl.svg";
 import TelegramIcon from "../assets/images/627443f9ac91b492e4c220ba_9055800_telegram_bxl.svg";
 import SocialMediaItem from "./Header/SocialMedia-Item.vue";
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 import { gsap } from "gsap";
 // Definisikan data di dalam setup
 const socialMediaLink = [
