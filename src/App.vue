@@ -1,47 +1,19 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="box hello" ref="boxRef">Animate Me!</div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
+import { gsap } from "gsap";
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+export default {
+  name: "GsapExample",
+  mounted() {
+    // Animasi sederhana menggunakan GSAP
+    gsap.to(this.$refs.boxRef, { x: 100, duration: 1 });
+  },
+};
+</script>
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+<style>
+@import url("./assets/styles/style.scss");
 </style>
