@@ -1,11 +1,8 @@
 <template>
-  <div class="container">
-    <div class="about-us">
-      <div v-for="(data, index) in dataAbout" :key="index">
-        <h2 class="title-section">{{ data.title }}</h2>
-        <div class="text-section">
-          {{ data.desc }}
-        </div>
+  <div class="section">
+    <div class="container">
+      <div id="about-us" class="container-group">
+        <SectionGroup :datas="dataAbout" />
       </div>
 
       <BlockQuote />
@@ -28,12 +25,49 @@
       </div>
     </div>
   </div>
+
+  <div class="section bg-blue">
+    <div class="container-projects">
+      <SectionGroup :datas="dataProjects" />
+    </div>
+
+    <div class="cards-project">
+      <div class="card">
+        <div class="card-content">
+          <h2>Emergency Aid. WAR 2022.</h2>
+          <p>
+            providing food and medicine to the shelters and animals which lost
+            their homes and families due to the war
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h2>Non-commercial feed line</h2>
+          <p>
+            construction of industrial production base where food for shelters
+            will be produced on a free basis
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h2>Education and Control</h2>
+          <p>
+            lectures on communication, organisation and coordination of
+            processes, control over the use of aid
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { onMounted } from "vue";
 import BlockQuote from "./main/BlockQuote.vue";
 import { gsap } from "gsap";
+import SectionGroup from "./main/SectionGroup.vue";
 
 const dataAbout = [
   {
@@ -43,6 +77,13 @@ const dataAbout = [
   {
     title: "Our Primary Goal",
     desc: "is to provide animals with the most necessary things - food, medicine, and urgent needs for the livelihood of shelters. We believe in our power and the power of conscious citizens who care about the environment and their health, who understand the importance of helping each other, especially our little friends. Growth begins with your care for your loved ones. Animals are one of the closest creatures to humans who remain with us throughout our lives. We all know the healing power of warmth, grace, and big loving eyes.",
+  },
+];
+
+const dataProjects = [
+  {
+    title: "Our Projects",
+    desc: "are very different in terms of priority, scale and complexity of implementation",
   },
 ];
 
@@ -56,24 +97,43 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-.about-us {
-  padding-block: 10%;
+.bg-blue {
+  background-color: #3e88ff;
+}
 
-  .title-section {
-    color: black;
-    font-size: 4vw;
-    font-weight: 700;
+.container-projects {
+  color: white;
+}
+
+.card {
+  text-align: center;
+  border: 0.25em solid #fff;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 4em;
+  display: flex;
+}
+
+.card-content {
+  font-family: Arial, sans-serif;
+  h2 {
+    text-align: start;
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 2vw;
+    text-align: start;
+    color: white;
     line-height: 1.25em;
   }
+}
 
-  .text-section {
-    color: black;
-    font-size: 2.5vw;
-    font-family: "DM Sans", sans-serif;
-    line-height: 1.5em;
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-  }
+.cards-project {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
 </style>
