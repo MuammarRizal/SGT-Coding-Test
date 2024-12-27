@@ -59,4 +59,16 @@ export default {
     }
   }
 }
+@media screen and (max-width: 480px) {
+  .collection-item__ward {
+    width: 48%;
+    .project-link-wrap {
+      .wards-wrap {
+        .ward-name {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
 </style>
