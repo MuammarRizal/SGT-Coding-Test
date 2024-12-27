@@ -70,4 +70,18 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .collection-item---partner {
+    width: 48%;
+    .partner-wrap {
+      .team-name {
+        font-size: 1em;
+      }
+      .team-title {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
 </style>

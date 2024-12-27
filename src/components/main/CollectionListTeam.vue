@@ -71,4 +71,17 @@ export default {
     }
   }
 }
+@media screen and (max-width: 460px) {
+  .collection-item---team {
+    width: 48%;
+    .team-wrap {
+      .team-name {
+        font-size: 1em;
+      }
+      .team-title {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
 </style>
