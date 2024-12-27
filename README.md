@@ -59,13 +59,13 @@ npm install
 To start the development server, run the following command:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 or, if using Yarn:
 
 ```bash
-yarn dev
+npm dev
 ```
 
 The application will be available at:
@@ -138,10 +138,10 @@ project-folder/
 
 The following scripts are available in the `package.json` file:
 
-- `npm run dev`: Start the development server.
-- `npm run build`: Build the application for production.
-- `npm run preview`: Preview the production build.
-- `npm run lint`: Run linter to check code quality.
+- `pnpm run dev`: Start the development server.
+- `pnpm run build`: Build the application for production.
+- `pnpm run preview`: Preview the production build.
+- `pnpm run lint`: Run linter to check code quality.
 
 ---
 
