@@ -15,7 +15,17 @@ import AndriyImg from "../assets/images/627fcc7339e6f5389ed03013_02.jpg";
 import AnastasiaImg from "../assets/images/627fcc4b694dfd4d65a13230_01.jpg";
 import SectionGroup from "./main/SectionGroup.vue";
 import CollectionListSupport from "./main/CollectionListSupport.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { onMounted } from "vue";
 const datas = [{ title: "Socially Active Citizens", desc: "Support Us" }];
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+    offset: 200,
+  });
+});
 
 const datasSupport = [
   {
@@ -98,7 +108,7 @@ const datasSupport = [
     </div>
 
     <div class="collection-list-wrap">
-      <div class="collection-list---partner">
+      <div class="collection-list---partner" data-aos="fade-up">
         <CollectionListSupport :datas="datasSupport" />
       </div>
     </div>

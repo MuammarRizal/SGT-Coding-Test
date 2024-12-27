@@ -6,7 +6,10 @@ import AccurlImg from "../assets/images/6265d7edf0c46ce38f559328_download.png";
 import LaudisImg from "../assets/images/6265d7d930a5c2377aedf9d4_logo_laudis_accountancy.png";
 import KickBiteimg from "../assets/images/6265d7c51ad96b1cbf31b0c0_photo_2022-04-21 20.43.09.jpeg";
 import CollectionListSupport from "./main/CollectionListSupport.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import SectionGroup from "./main/SectionGroup.vue";
+import { onMounted } from "vue";
 const datas = [
   {
     title: "Our Partners",
@@ -40,6 +43,13 @@ const dataPartners = [
     alt: "KickBite",
   },
 ];
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+    offset: 200,
+  });
+});
 </script>
 
 <template>
@@ -49,7 +59,7 @@ const dataPartners = [
     </div>
 
     <div class="collection-list-wrap">
-      <div class="collection-list---partner">
+      <div class="collection-list---partner" data-aos="fade-up">
         <CollectionListSupport :datas="dataPartners" />
       </div>
     </div>

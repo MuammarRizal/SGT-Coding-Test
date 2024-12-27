@@ -32,7 +32,7 @@
     </div>
 
     <div class="cards-project">
-      <div class="card">
+      <div class="card" data-aos="fade-right">
         <div class="card-content">
           <h2>Emergency Aid. WAR 2022.</h2>
           <p>
@@ -41,7 +41,7 @@
           </p>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-right">
         <div class="card-content">
           <h2>Non-commercial feed line</h2>
           <p>
@@ -50,7 +50,7 @@
           </p>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-right">
         <div class="card-content">
           <h2>Education and Control</h2>
           <p>
@@ -68,7 +68,8 @@ import { onMounted } from "vue";
 import BlockQuote from "./main/BlockQuote.vue";
 import { gsap } from "gsap";
 import SectionGroup from "./main/SectionGroup.vue";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const dataAbout = [
   {
     title: "We Are",

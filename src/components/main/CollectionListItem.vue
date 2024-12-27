@@ -3,6 +3,7 @@
     class="collection-item__ward"
     v-for="(data, index) in datas"
     :key="index"
+    data-aos="fade-up"
   >
     <a href="#" class="project-link-wrap">
       <div class="wards-wrap">
@@ -13,6 +14,9 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { onMounted } from "vue";
 export default {
   props: {
     datas: {
@@ -21,6 +25,12 @@ export default {
     },
   },
 };
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+  });
+});
 </script>
 
 <style lang="scss" scoped>

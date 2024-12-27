@@ -7,7 +7,7 @@
       <div class="collection-list__wrap">
         <CollectionListItem :datas="collectionListWrap" />
       </div>
-      <div class="link">
+      <div class="link" data-aos="fade-right">
         <a href="#" class="apply-link-wrap">Apply For Help</a>
       </div>
     </div>
@@ -15,8 +15,11 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
 import CollectionListItem from "./main/CollectionListItem.vue";
 import SectionGroup from "./main/SectionGroup.vue";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const weHelp = [
   {
@@ -57,6 +60,12 @@ const collectionListWrap = [
   "Sos",
   "Best Friends",
 ];
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+  });
+});
 </script>
 
 <style lang="scss">

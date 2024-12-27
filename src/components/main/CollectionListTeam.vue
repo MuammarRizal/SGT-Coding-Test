@@ -1,4 +1,7 @@
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { onMounted } from "vue";
 export default {
   props: {
     datas: {
@@ -7,6 +10,12 @@ export default {
     },
   },
 };
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+  });
+});
 </script>
 
 <template>
@@ -15,6 +24,7 @@ export default {
       class="collection-item---team"
       v-for="(data, index) in datas"
       :key="index"
+      data-aos="fade-up"
     >
       <div class="team-wrap">
         <img :src="data.img" alt="Rizal" class="team-photo" />

@@ -2,10 +2,11 @@
 // Import gambar hanya sekali, lebih rapi
 import ImgDog from "../assets/images/6265332e63b917130ca8d702_isa-logo-dog-clean.svg";
 import SocialMediaItem from "./Header/SocialMedia-Item.vue";
-import ImgCat from "../assets/images/627fc81139e6f5dca2d02054_isa-logo-cat-clean.svg";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { onMounted } from "vue";
 import { gsap } from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
   gsap.from(".hero-logo__wrapper .img-hero img", {

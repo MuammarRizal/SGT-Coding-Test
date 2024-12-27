@@ -14,15 +14,24 @@
         </div>
       </div>
       <div class="row">
-        <img :src="ImgCats" alt="image cats" />
+        <img :src="ImgCats" alt="image cats" data-aos="fade-left" />
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
+import AOS from "aos";
+import "aos/dist/aos.css";
 import SocialMediaItem from "./Header/SocialMedia-Item.vue";
 import ImgCats from "../assets/images/62647f9fbe07235ba9b28d67_star-white-with-animals.svg";
+import { onMounted } from "vue";
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+  });
+});
 </script>
 
 <style lang="scss">
