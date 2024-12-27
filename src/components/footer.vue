@@ -13,8 +13,8 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <img :src="ImgCats" alt="image cats" data-aos="fade-left" />
+      <div class="row" data-aos="fade-left">
+        <img :src="ImgCats" alt="image cats" />
       </div>
     </div>
   </footer>
