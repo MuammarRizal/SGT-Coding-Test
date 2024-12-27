@@ -108,7 +108,7 @@ header {
 
       .social-media__title {
         color: $colorBlack;
-        font-size: 2.5vw;
+        font-size: 2rem;
         font-family: DM Sans, sans-serif;
         text-align: center;
       }
@@ -121,10 +121,29 @@ header {
 
       .social-media__item {
         margin-top: 15px;
-        width: 5.5%;
-        height: 5.5%;
+        width: 80px;
         padding: 0.5rem;
       }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    .container {
+      .hero-logo__wrapper {
+        width: 50%;
+
+        .img-hero img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .hero-logo__wrapper {
+    gap: 10px;
+
+    .text-hero h1 {
+      font-size: 8vw; // Sesuaikan ukuran teks untuk layar kecil
     }
   }
 }
