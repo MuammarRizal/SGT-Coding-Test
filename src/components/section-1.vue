@@ -131,9 +131,32 @@ onMounted(() => {
   }
 }
 
+.text-section {
+  font-size: 2vw;
+  line-height: 1.25em;
+  color: black;
+  margin-bottom: 1.3rem;
+}
+
 .cards-project {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+}
+@media screen and (max-width: 480px) {
+  .text-section {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-content {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  }
 }
 </style>

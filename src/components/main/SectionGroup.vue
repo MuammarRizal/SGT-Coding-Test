@@ -35,4 +35,14 @@ export default {
   margin-top: 0.5em;
   margin-bottom: 1em;
 }
+
+@media screen and (max-width: 480px) {
+  .title-section {
+    font-size: 2rem;
+  }
+
+  .text-section {
+    font-size: 1.2rem;
+  }
+}
 </style>

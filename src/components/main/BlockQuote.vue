@@ -21,4 +21,10 @@ blockquote {
   font-size: 2.5vw;
   line-height: 1.5em;
 }
+
+@media screen and (max-width: 480px) {
+  .blockquote {
+    font-size: 1.2rem;
+  }
+}
 </style>
