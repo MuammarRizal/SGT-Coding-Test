@@ -62,7 +62,7 @@ To start the development server, run the following command:
 pnpm run dev
 ```
 
-or, if using Yarn:
+or, if using npm:
 
 ```bash
 npm dev
