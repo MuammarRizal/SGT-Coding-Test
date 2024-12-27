@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import SectionGroup from "./main/SectionGroup.vue";
 import DarynaImg from "../assets/images/62744ee9fce7fbaf400c22f8_2.jpg";
 import PolinaImg from "../assets/images/62744edaac91b4183ac27e10_5.jpg";
