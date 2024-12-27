@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="row">
-        <img :src="ImgCats" alt="" />
+        <img :src="ImgCats" alt="image cats" />
       </div>
     </div>
   </footer>
@@ -66,6 +66,30 @@ import ImgCats from "../assets/images/62647f9fbe07235ba9b28d67_star-white-with-a
     margin-top: 15px;
     width: 10%;
     padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+
+    .row {
+      width: 100%;
+      .title-footer {
+        font-size: 2rem;
+      }
+
+      .text-footer {
+        font-size: 1em;
+        margin: 0;
+      }
+    }
+  }
+
+  .social-media__items {
+    .social-media__item {
+      width: 100%;
+    }
   }
 }
 </style>
