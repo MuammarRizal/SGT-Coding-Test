@@ -5,9 +5,13 @@
     :key="index"
   >
     <div class="partner-wrap">
-      <img :src="data.img" alt="" class="partner-logo" />
-      <div class="team-name">{{ data.title }}</div>
-      <div class="team-title">{{ data.desc }}</div>
+      <img
+        :src="data.img"
+        :alt="data.alt ? data.alt : data.name"
+        class="partner-logo"
+      />
+      <div class="team-name" v-if="data.title">{{ data.title }}</div>
+      <div class="team-title" v-if="data.desc">{{ data.desc }}</div>
     </div>
   </div>
 </template>
